@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - THE-O-HUB</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header (same as index.html) -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="icons/Ohub_logo.jpeg" alt="THE-O-HUB Logo">
+                <span>THE-O-HUB</span>
+            </a>
+            
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">SHOP</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">BLOG</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+                    <li class="nav-item cart-icon"><a class="nav-link" href="cart.html"><i class="far fa-shopping-bag"></i><span class="cart-count">0</span></a></li>
+                </ul>
+                
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Checkout Section -->
+    <section class="checkout-section section-padding">
+        <div class="container">
+            <h2 class="section-title">Checkout</h2>
+            
+            <div class="checkout-container">
+                <div class="checkout-steps">
+                    <div class="step active" data-step="1">
+                        <span>1</span>
+                        <p>Shipping</p>
+                    </div>
+                    <div class="step" data-step="2">
+                        <span>2</span>
+                        <p>Payment</p>
+                    </div>
+                    <div class="step" data-step="3">
+                        <span>3</span>
+                        <p>Confirmation</p>
+                    </div>
+                </div>
+                
+                <form class="checkout-form" id="checkout-form">
+                    <!-- Step 1: Shipping Information -->
+                    <div class="form-step active" id="step-1">
+                        <h3>Shipping Information</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="first-name">First Name</label>
+                                <input type="text" id="first-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="last-name">Last Name</label>
+                                <input type="text" id="last-name" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="address">Street Address</label>
+                            <input type="text" id="address" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input type="text" id="city" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="postal-code">Postal Code</label>
+                                <input type="text" id="postal-code" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="country">Country</label>
+                            <select id="country" required>
+                                <option value="">Select Country</option>
+                                <option value="South Africa" selected>South Africa</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn-outline" id="back-to-cart">Back to Cart</button>
+                            <button type="button" class="btn-primary" id="next-to-payment">Continue to Payment</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2: Payment Information -->
+                    <div class="form-step" id="step-2">
+                        <h3>Payment Method</h3>
+                        
+                        <div class="payment-methods">
+                            <div class="payment-method">
+                                <input type="radio" id="credit-card" name="payment-method" value="credit-card" checked>
+                                <label for="credit-card">Credit/Debit Card</label>
+                            </div>
+                            <div class="payment-method">
+                                <input type="radio" id="paypal" name="payment-method" value="paypal">
+                                <label for="paypal">PayPal</label>
+                            </div>
+                            <div class="payment-method">
+                                <input type="radio" id="bank-transfer" name="payment-method" value="bank-transfer">
+                                <label for="bank-transfer">Bank Transfer</label>
+                            </div>
+                        </div>
+                        
+                        <div class="credit-card-form" id="credit-card-form">
+                            <div class="form-group">
+                                <label for="card-number">Card Number</label>
+                                <input type="text" id="card-number" placeholder="1234 5678 9012 3456">
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="expiry-date">Expiry Date</label>
+                                    <input type="text" id="expiry-date" placeholder="MM/YY">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cvv">CVV</label>
+                                    <input type="text" id="cvv" placeholder="123">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="card-name">Name on Card</label>
+                                <input type="text" id="card-name">
+                            </div>
+                        </div>
+                        
+                        <div class="terms-container">
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="terms" required>
+                                <label for="terms">I agree to the <a href="#" id="terms-link">Terms and Conditions</a></label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn-outline" id="back-to-shipping">Back to Shipping</button>
+                            <button type="button" class="btn-primary" id="next-to-confirm">Complete Payment</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3: Order Confirmation -->
+                    <div class="form-step" id="step-3">
+                        <div class="order-confirmation">
+                            <div class="confirmation-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <h3>Order Confirmed!</h3>
+                            <p>Thank you for your purchase. Your order has been received.</p>
+                            <div class="order-details">
+                                <p><strong>Order Number:</strong> <span id="order-number">OH-123456</span></p>
+                                <p><strong>Estimated Delivery:</strong> <span id="delivery-date">3-5 business days</span></p>
+                            </div>
+                            <div class="confirmation-actions">
+                                <a href="index.html" class="btn-primary">Continue Shopping</a>
+                                <a href="#" class="btn-outline" id="view-order">View Order Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                
+                <div class="order-summary">
+                    <h3>Order Summary</h3>
+                    
+                    <div class="order-items" id="checkout-items">
+                        <!-- Order items will be loaded dynamically -->
+                    </div>
+                    
+                    <div class="summary-details">
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span id="checkout-subtotal">R0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Shipping</span>
+                            <span id="checkout-shipping">R0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Tax</span>
+                            <span id="checkout-tax">R0.00</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total</span>
+                            <span id="checkout-total">R0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terms and Conditions Modal -->
+    <div class="modal" id="terms-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Terms and Conditions</h3>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="terms-content">
+                    <h4>1. Agreement to Terms</h4>
+                    <p>By accessing or using THE-O-HUB website, you agree to be bound by these Terms and Conditions.</p>
+                    
+                    <h4>2. Products and Pricing</h4>
+                    <p>All prices are in South African Rand (ZAR). We reserve the right to change prices at any time without notice.</p>
+                    
+                    <h4>3. Payment</h4>
+                    <p>Payment must be made in full before order processing. We accept credit cards, PayPal, and bank transfers.</p>
+                    
+                    <h4>4. Shipping and Delivery</h4>
+                    <p>We ship to addresses within South Africa. Delivery times are estimates and not guaranteed.</p>
+                    
+                    <h4>5. Returns and Refunds</h4>
+                    <p>Returns are accepted within 30 days of purchase. Items must be unused and in original packaging.</p>
+                    
+                    <h4>6. Privacy Policy</h4>
+                    <p>Your personal information is protected according to our Privacy Policy.</p>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="modal-terms">
+                        <label for="modal-terms">I have read and agree to the Terms and Conditions</label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-outline close-modal">Cancel</button>
+                <button class="btn-primary" id="accept-terms">Accept</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="footer section-padding">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Footer content from index.html -->
+            </div>
+            
+            <div class="copyright">
+                <p>© 2024, THE-O-HUB - Home of All Gadgets, Accessories & Kicks</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="checkout.js"></script>
+</body>
+</html>
