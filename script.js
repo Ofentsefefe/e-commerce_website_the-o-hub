@@ -2,7 +2,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     initializeApp();
 });
-
 // Initialize Application
 function initializeApp() {
     // Initialize navigation
@@ -429,4 +428,5 @@ function calculateCartTotals() {
         tax: tax.toFixed(2),
         total: total.toFixed(2)
     };
+
 }
