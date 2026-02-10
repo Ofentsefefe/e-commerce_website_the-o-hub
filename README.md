@@ -12,6 +12,7 @@ THE O-HUB is a modern, user-friendly ecommerce website that allows users to brow
 THE O-HUB is a modern, user-friendly ecommerce website that allows users to browse, shop, and manage products online. Users can create accounts, log in securely, and save their information for future purchases. The platform is designed as a static website integrated with Firebase for authentication and data storage.
 
 ## features
+
 View Products
 Search products of your desire, there are filters that will make it easy for the user to find a product(s) that is suitable for them,
 filters differ there is price range, start rating and brand names. AND also there is a view option where a user will be able to view a product
