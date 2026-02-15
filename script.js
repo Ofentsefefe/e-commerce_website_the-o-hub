@@ -17,7 +17,6 @@ function initializeApp() {
     // Initialize newsletter form
     initNewsletter();
 }
-
 // Navigation Toggle
 function initNavigation() {
     const hamburger = document.querySelector('.hamburger');
@@ -430,3 +429,4 @@ function calculateCartTotals() {
     };
 
 }
+
