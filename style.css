@@ -28,18 +28,15 @@ body {
     background-color: var(--light);
     line-height: 1.6;
 }
-
 html {
     scroll-behavior: smooth;
 }
-
 .container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
-
 .section-padding {
     padding: 80px 0;
 }
@@ -1430,3 +1427,4 @@ button {
     }
 
 }
+
