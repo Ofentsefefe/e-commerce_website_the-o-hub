@@ -1,4 +1,3 @@
-// Shop Page Functionality
 document.addEventListener('DOMContentLoaded', function () {
     initializeShop();
 });
@@ -992,4 +991,5 @@ const modalStyles = `
 // Add modal styles to document
 const styleSheet = document.createElement('style');
 styleSheet.textContent = modalStyles;
+
 document.head.appendChild(styleSheet);
